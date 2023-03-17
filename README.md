@@ -50,8 +50,8 @@
 ## Инструкция по развёртыванию проекта
 
 * клонировать проект на компьютер `git clone https://github.com/WorkHotRoad/cat_charity_fund.git`
-* создание виртуального окружения `python3 -m venv venv`
-* запуск виртуального окружения `. venv/bin/activate`
+* создание виртуального окружения `python -m venv venv`/`python3 -m venv venv`
+* запуск виртуального окружения `source venv/Scripts/activate`/`. venv/bin/activate`
 * установить зависимости из файла requirements.txt `pip install -r requirements.txt`
 * запуск сервера `uvicorn main:app`
 * запуск сервера с автоматическим рестартом `uvicorn main:app --reload`
