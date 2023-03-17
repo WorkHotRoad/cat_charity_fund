@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.api.validators import(
+from app.api.validators import (
     check_project_already_invested,
     check_name_duplicate,
     check_project_closed,
@@ -14,7 +14,7 @@ from app.core.db import get_async_session
 from app.core.user import current_superuser
 from app.crud.charity_project import charity_project_crud
 from app.models import Donation
-from app.schemas.charity_project import(
+from app.schemas.charity_project import (
     CharityProjectCreate,
     CharityProjectDB,
     CharityProjectUpdate
@@ -83,7 +83,6 @@ async def partially_update_project(
         project, obj_in, session
     )
     return project
-
 
 
 @router.delete(

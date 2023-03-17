@@ -1,3 +1,5 @@
+from typing import List
+
 from datetime import datetime
 
 from sqlalchemy import select
@@ -13,7 +15,7 @@ async def investing(
 ) -> Abstract:
     source_db_all = await session.execute(
         select(model_db).where(
-            model_db.fully_invested == False
+            model_db.fully_invested == 0
         ).order_by(model_db.create_date)
     )
     source_db_all = source_db_all.scalars().all()
@@ -31,7 +33,7 @@ async def investing(
 async def invest(
     obj_in: Abstract,
     obj_db: Abstract
-) -> list[Abstract]:
+) -> List[Abstract]:
     rem_obj_in = obj_in.full_amount - obj_in.invested_amount
     rem_obj_db = obj_db.full_amount - obj_db.invested_amount
     if rem_obj_in > rem_obj_db:

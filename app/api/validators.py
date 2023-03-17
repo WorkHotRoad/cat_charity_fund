@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.crud.charity_project import charity_project_crud
 from app.models import CharityProject
 
+
 async def check_name_duplicate(
     project_name: str,
     session: AsyncSession,
