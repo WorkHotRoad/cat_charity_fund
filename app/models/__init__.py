@@ -1,4 +1,4 @@
-from .user import User
-from .charity_project import CharityProject
-from .donation import Donation
-from .abstract_class import Abstract
+from .user import User # noqa
+from .charity_project import CharityProject # noqa
+from .donation import Donation # noqa
+from .abstract_class import Abstract # noqa
