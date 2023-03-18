@@ -2,9 +2,9 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    app_title: str = 'QRKot'  # 'APP_TITLE'
-    database_url: str = 'sqlite+aiosqlite:///./fastapi.db'  # 'DATABASE_URL'
-    description: str = 'приложение для Благотворительного фонда поддержки котиков'  # 'DESCRIPTION'
+    app_title: str = 'QRKot'
+    database_url: str = 'sqlite+aiosqlite:///./fastapi.db'
+    description: str = 'приложение для Благотворительного фонда поддержки котиков'
     secret: str = 'SECRET'
 
     class Config:
